@@ -1,0 +1,194 @@
+/* RESET PADRÃO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --azul-escuro: #0f2247;
+    --amarelo: #f1b80a;
+    --cinza-fundo: #f4f6f9;
+    --texto-escuro: #1e293b;
+    --texto-claro: #64748b;
+    --branco: #ffffff;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--texto-escuro);
+    background-color: var(--branco);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* CABEÇALHO */
+header {
+    padding: 25px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.logo-text {
+    font-size: 1.6rem;
+    color: var(--azul-escuro);
+    font-weight: 500;
+}
+
+.logo-text strong {
+    color: var(--amarelo);
+    font-weight: 800;
+}
+
+/* INTRODUÇÃO */
+.intro-section {
+    padding: 60px 0 40px 0;
+}
+
+.badge {
+    background-color: var(--azul-escuro);
+    color: var(--amarelo);
+    padding: 6px 16px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.intro-section h1 {
+    font-size: 2.5rem;
+    color: var(--azul-escuro);
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.main-description {
+    font-size: 1.2rem;
+    color: var(--texto-claro);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* FUNCIONALIDADES DO APP */
+.features-section {
+    padding: 40px 0 60px 0;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: var(--azul-escuro);
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* Linha decorativa abaixo do título do bloco */
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--azul-escuro);
+    margin: 15px auto 0 auto;
+    border-radius: 2px;
+}
+
+.features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+
+.feature-card {
+    background-color: var(--branco);
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 30px 24px;
+    width: 300px;
+    transition: box-shadow 0.3s;
+}
+
+.feature-card:hover {
+    box-shadow: 0 10px 20px rgba(15, 34, 71, 0.05);
+}
+
+.icon-container {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    font-size: 1.3rem;
+    color: var(--azul-escuro);
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.feature-card p {
+    font-size: 0.95rem;
+    color: var(--texto-claro);
+}
+
+/* CAIXA DE RESUMO */
+.summary-section {
+    padding: 20px 0 80px 0;
+}
+
+.summary-box {
+    background-color: #fefcf3; /* tom de amarelo bem claro de fundo */
+    border-left: 5px solid var(--amarelo);
+    border-top: 1px solid #fef08a;
+    border-right: 1px solid #fef08a;
+    border-bottom: 1px solid #fef08a;
+    padding: 30px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.summary-icon {
+    font-size: 2.5rem;
+}
+
+.summary-box p {
+    font-size: 1.1rem;
+    color: var(--azul-escuro);
+}
+
+/* RODAPÉ */
+footer {
+    background-color: var(--azul-escuro);
+    color: rgba(255, 255, 255, 0.6);
+    padding: 25px 0;
+    font-size: 0.9rem;
+}
+
+/* AJUSTES PARA CELULAR */
+@media (max-width: 640px) {
+    .feature-card {
+        width: 100%;
+    }
+    
+    .summary-box {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .intro-section h1 {
+        font-size: 2rem;
+    }
+}
